@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Maqolani o'chirish{% endblock title %}
+    {% block content %}
+    <div style="padding-left: 500px; padding-right:500px; padding-top: 100px">
+        <h2>Maqolani o'chirish</h2>
+        <form method="post">{% csrf_token %}
+            {{ form|crispy }}
+            <h4>"{{article.title}}" - nomli maqolani o'chirishni hohlaysizmi?</h4>
+            <div class="d-grid gap-1 col-9" style="padding-top:20px">
+              <button class="btn btn-primary" type="submit">Ha</button>
+            </div>
+        </form>
+    </div>
+    {% endblock content %}
