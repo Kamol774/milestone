@@ -5,11 +5,8 @@
         {% if user.is_authenticated %}
             <h3 style="position: absolute; left: 1200px; top: 90px;">Saytga xush kelibsiz {{user.username | upper}} ! <h3/>
         {% else %}
-            <h2 style="position: absolute; left: 550px; top: 100px;">Saytga kirmagansiz</h2>
+            <h2 style="position: absolute; left: 1200px; top: 90px;">Saytga kirmagansiz</h2>
         {% endif %}
-            <div style="position: absolute; left: 500px; top: 200px;" >
-<!--                <a href="{% url 'article_list' %}">Yangiliklar</a>-->
-            </div>
 
 	<!-- START HOME -->
 	<section id="home" class="templatemo-home">
@@ -36,28 +33,34 @@
 					<h2 class="title">My <strong>Work</strong></h2>
 				</div>
 				<div class="col-md-4 col-sm-4">
-					<div class="work-wrapper">
-						<i class="fa fa-link"></i>
-						<h3 class="text-uppercase tm-work-h3">Telegram BOTs</h3>
-						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
-					</div>
+					<a href="{% url 'article_list' %}">
+						<div class="work-wrapper">
+							<i class="fa fa-link"></i>
+							<h3 class="text-uppercase tm-work-h3">Telegram BOTs</h3>
+							<hr>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
+						</div>
+					</a>
 				</div>
 				<div class="col-md-4 col-sm-4">
-					<div class="work-wrapper">
-						<i class="fa fa-flash"></i>
-						<h3 class="text-uppercase tm-work-h3">Web Projects</h3>
-						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
-					</div>
+					<a href="{% url 'article_list' %}">
+						<div class="work-wrapper">
+							<i class="fa fa-flash"></i>
+							<h3 class="text-uppercase tm-work-h3">Web Projects</h3>
+							<hr>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
+						</div>
+					</a>
 				</div>
 				<div class="col-md-4 col-sm-4">
-					<div class="work-wrapper">
-						<i class="fa fa-dashboard"></i>
-						<h3 class="text-uppercase tm-work-h3">HTML Templates</h3>
-						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
-					</div>
+					<a href="{% url 'article_list' %}">
+						<div class="work-wrapper">
+							<i class="fa fa-dashboard"></i>
+							<h3 class="text-uppercase tm-work-h3">HTML Templates</h3>
+							<hr>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna.</p>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -68,7 +71,7 @@
 	<section id="portfolio" class="tm-portfolio">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-16 wow bounce" style="margin-left:200px">
+				<div class="col-md-12 wow bounce" style="margin-left:200px">
 					<div class="title">
 						<h2 class="tm-portfolio-title">My <strong>Portfolio</strong></h2>
 					</div>
@@ -176,7 +179,7 @@
 					<p><strong>Address:</strong> Yangiyer sh., Sirdaryo v., Uzbekistan</p>
 					<p><strong>Phone:</strong> +998 97 190 77 74</p>
 					<p><strong>Email:</strong> chust1222@gmail.com</p>
-					<p><strong>Website:</strong> <a href="#" class="tm-red-text">www.company.com</a></p>
+					<a href="#" class="tm-red-text"><strong>About my autobiography</strong></a></a>
 				</div>
 				<div class="col-md-6 col-sm-6">
 					<h2 class="title"><strong>Some</strong> Skills</h2>
@@ -296,14 +299,12 @@
 				</div>
 				<div class="col-md-1 col-sm-1"></div>
 				<div class="col-md-12 col-sm-12">
-					<p>Copyright &copy; 2018 Ultra Profile
-                    . design: <a rel="nofollow noopener" href="https://templatemo.com">template mo</a></p>
+					<p>Copyright &copy; 2021.
+                    designed by: <a rel="nofollow noopener" href="https://www.linkedin.com/in/kamoliddin-xalilov-6a7314124/">Khalilov Kamoliddin</a></p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- END CONTACT -->
 
-
-
-                {% endblock content %}
+{% endblock content %}
