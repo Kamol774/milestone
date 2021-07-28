@@ -5,6 +5,7 @@
     <div style="padding-left: 300px; padding-right:300px; padding-top: 100px">
         <h2>Yangi maqola qo'shish</h2>
         <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.media }}
             {{ form|crispy }}
             <div class="d-grid gap-1 col-12" style="padding-top:20px">
               <button class="btn btn-primary" type="submit">Saqlash</button>

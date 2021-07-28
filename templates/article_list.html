@@ -63,7 +63,9 @@
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between">
-                        <span>36 comments</span>
+                        {% for comment in article.comments.all %}
+                        <span>{{ forloop.counter}} comments</span>
+                        {% endfor %}
                     </div>
                 </article>
                 {% endfor %}

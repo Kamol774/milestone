@@ -36,10 +36,11 @@
                 </a>
             </div>
             <p class="tm-mb-80 pr-5 text-white">
-                Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right side content will scroll up and down.
+                Eng so'ngi yangiliklar faqat bizda!!!
             </p>
         </div>
     </header>
+
     <div class="container-fluid">
         <main class="tm-main">
             <div class="row tm-row tm-mb-45">
@@ -54,7 +55,7 @@
                 <div class="col-12">
                     <div class="mb-4">
                         <h2 class="pt-2 tm-mb-40 tm-color-primary tm-post-title">{{article.title}}</h2>
-                        <p>{{article.body}}</p>
+                        <p>{{article.body | safe }}</p>
                         <div class="d-flex justify-content-between tm-pt-15">
                             <span class="tm-color-primary">Author: {{article.author}}</span>
                             <span class="tm-color-primary">{{article.date}}</span>
@@ -64,13 +65,36 @@
                             <h4>|</h4>
                             <a href="{% url 'article_delete' article.pk %}">Maqolani o'chirish</a>
                         </div>
+                                    <div class="row tm-row tm-mb-10">
+                            <br><br>
+
+                    </div>
+                         <!-- Comments -->
+                    <div style="width:100%;">
+                        <h2 class="tm-color-primary tm-post-title">Comments</h2>
+                        <hr class="tm-hr-primary tm-mb-45">
+                        {% for comment in article.comments.all %}
+                        <div class="tm-comment tm-mb-45">
+                            <figure class="tm-comment-figure">
+                                <img src="{% static 'img/comment-1.jpg' %}" alt="Image" class="mb-2 rounded-circle img-thumbnail">
+                                <figcaption class="tm-color-primary text-center">{{comment.author}}</figcaption>
+                            </figure>
+                            <div>
+                                <p>
+                                    {{comment}}
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <span class="tm-color-primary">{{comment.date}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
             <div class="row tm-row tm-mb-10">
-                <div class="col-12">
-                    <hr class="tm-hr-primary  tm-mb-55">
-                </div>
+                <br>
 <!------------------------------------------------------------------>
                 <!--                Hali tayyor emas buyeri-->
                 {% for article in object_list %}
@@ -86,8 +110,8 @@
                 </div>
                 {% endfor %}
 <!------------------------------------------------------------------>
-            </div>
-            <footer class="row tm-row">
+            </div><br>
+            <footer class="row tm-row" style="width:100%;">
                 <div class="col-md-6 col-12 tm-color-gray">
                     Designed by: <a rel="nofollow" target="_parent" href="https://www.linkedin.com/in/kamoliddin-xalilov-6a7314124?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BkyBBEvm4Sx2JoaPfP81drg%3D%3D" class="tm-external-link">Khalilov Kamoliddin</a>
                 </div>

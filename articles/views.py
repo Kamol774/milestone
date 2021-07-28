@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView, CreateView
 from .models import Article
 from django.views.generic.edit import UpdateView, DeleteView
 
+
 # Create your views here.
 class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
@@ -43,3 +44,5 @@ class ArticleCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 # user superuser ekanligini tekshirish
     def test_func(self):
         return self.request.user.is_superuser
+
+
