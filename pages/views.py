@@ -13,3 +13,6 @@ def HomePageView(request):
             model.save()
 
         return render(request, 'home.html')
+
+def ListView(request):
+    return render(request, 'telegram_bot.html')

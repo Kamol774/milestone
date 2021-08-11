@@ -25,6 +25,16 @@ hr {
   text-transform: uppercase;
 }
 
+.line-5 {
+  height: 5px;
+  background: linear-gradient(
+    to bottom,
+    transparent 2px,
+    black 2px,
+    black 3px,
+    transparent 3px
+  );
+}
 /* START NAVIGATION */
 .sticky-navigation { opacity: 0; }
 .navbar-default {
@@ -75,7 +85,7 @@ hr {
 
 /* START HOME */
 .templatemo-home {
-  background: url('img/home-bg.jpg');
+  background: url('../img/home-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -315,6 +325,7 @@ hr {
   padding-right: 80px;
 }
 /* END RESUME */
+
 
 /* START ABOUT */
 .tm-about {
