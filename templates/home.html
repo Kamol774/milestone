@@ -2,16 +2,13 @@
 {% load static %}
 {% block title %}Bosh sahifa{% endblock title %}
     {% block content %}
-        {% if user.is_authenticated %}
-            <h3 style="position: absolute; left: 1200px; top: 90px;">Saytga xush kelibsiz {{user.username | upper}} ! <h3/>
-        {% else %}
-            <h2 style="position: absolute; left: 1200px; top: 90px;">Saytga kirmagansiz</h2>
-        {% endif %}
 
 	<!-- START HOME -->
 	<section id="home" class="templatemo-home">
 		<div class="container">
+
 			<div class="row">
+
 				<div class="col-md-2 col-sm-1"></div>
 				<div class="col-md-8 col-sm-10">
 					<h1 class="tm-home-title, fw-bolder"><strong>Khalilov Kamoliddin</strong></h1>
@@ -46,7 +43,7 @@
 						<div class="work-wrapper">
 							<img src="{% static 'img/q2.jpeg' %}">
 							<h3 class="text-uppercase tm-work-h3">Web Projects</h3>
-							<p>Here an example website that I built with django. It includes authorization, adding/editing/deleting articles with comments and so on... </p><br><br>
+							<p>Here an example website that I built with django. It includes authorization, adding/editing/deleting articles with comments and so on... </p>
 						</div>
 					</a>
 				</div>
@@ -55,7 +52,7 @@
 						<div class="work-wrapper">
 							<img src="{% static 'img/q1.jpg' %}">
 							<h3 class="text-uppercase tm-work-h3">Online shopping</h3>
-							<p>Sometimes I create modern and responsive web-market. Here one of them. It includes all steps from choosing products till ordering and payment.</p>
+							<p>Sometimes I create modern and responsive web-market. Here one of them which is called Max-Way. It includes all steps from choosing products till ordering and payment.</p>
 						</div>
 					</a>
 				</div>
@@ -66,9 +63,9 @@
 
 	<!-- START PORTFOLIO -->
 	<section id="portfolio" class="tm-portfolio">
-		<div class="container">
+		<div class="container" style="margin:auto">
 			<div class="row">
-				<div class="col-md-12 wow bounce" style="margin-left:200px">
+				<div class="col-md-12 wow bounce">
 					<div class="title">
 						<h2 class="tm-portfolio-title">My <strong>Portfolio</strong></h2>
 					</div>
@@ -208,12 +205,12 @@
 	<!-- END RESUME -->
 
 	<!-- START ABOUT -->
-	<section id="about" class="tm-about" >
+	<section id="about" class="tm-about">
 		<div class="container">
-			<div class="row">
+			<div class="row" style="justify-content: flex-end">
 				<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-7"
-					 style="margin-left: 600px;
-						  border: 10px dashed white;
+					 style="
+					 	  border: 10px dashed white;
 						  padding: 25px;
 						  background-color: coral;
 						  opacity: 0.8;">
