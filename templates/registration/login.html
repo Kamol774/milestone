@@ -8,7 +8,8 @@
                 {{ form|crispy }}
                 <div class="d-grid gap-1 col-12" style="padding-top:20px">
                   <button class="btn btn-primary" type="submit">Kirish</button>
-                  <a href="{% url 'password_reset' %}" class="btn btn-primary">Paro'lni unutdingizmi?</a>
+                  <a href="{% url 'password_reset' %}" class="btn btn-warning">Paro'lni unutdingizmi?</a>
+                  <a href="{% url 'signup' %}" class="btn btn-success">Ro'yxatdan o'tish</a>
                 </div>
             </form>
          </div>
